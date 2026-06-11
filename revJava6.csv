@@ -1,0 +1,58 @@
+﻿O que é Java;,Linguagem orientada a objetos, multiplataforma, executada pela JVM.
+Quais são os principais objetivos do Java;,Portabilidade, segurança, robustez, escalabilidade e produtividade.
+"O que significa ""Write Once Run Anywhere""";,O código Java roda em qualquer sistema com JVM.
+O que é a JVM;,A Máquina Virtual Java que executa o bytecode Java.
+Qual a função principal da JVM;,Gerenciar memória, threads e executar bytecode.
+O que é bytecode;,Código intermediário gerado pelo compilador Java.
+O que fica armazenado na Stack;,Chamadas de métodos e variáveis locais.
+O que fica armazenado na Heap;,Objetos criados com new.
+Onde fica uma variável de referência;,Na Stack.
+Onde ficam os dados reais do objeto;,Na Heap.
+Quando um objeto vira elegível ao Garbage Collector;,Quando não há mais referências acessíveis para ele.
+O que é Garbage Collector;,Mecanismo da JVM que limpa objetos não utilizados.
+Por que entender GC é importante para um sênior;,Impacta performance, pausas e consumo de memória.
+O que é memória compartilhada;,Memória acessada por múltiplas threads (Heap).
+O que é SOLID;,Conjunto de princípios para código manutenível.
+O que é SRP (Single Responsibility Principle);,Uma classe deve ter um único motivo para mudar.
+O que é DIP (Dependency Inversion Principle);,Depender de abstrações e não de implementações concretas.
+O que é acoplamento;,Dependência forte entre módulos.
+O que é coesão;,Foco de responsabilidade de uma classe.
+O que são Streams em Java;,API para processar coleções de forma declarativa.
+O que o método filter faz;,Filtra elementos conforme uma condição.
+O método map faz o quê;,Transforma elementos da stream.
+Streams modificam a lista original;,Não, retornam um novo resultado.
+O que é programação declarativa;,Descrever o que deve ser feito, não como.
+Quando evitar Streams;,Quando prejudicam clareza ou performance.
+O que é Spring Boot;,Framework que acelera o desenvolvimento Spring.
+O que é Injeção de Dependência;,Objetos são entregues pelo framework.
+O que é Auto-configuração;,Configuração automática baseada em dependências.
+"O que significa ""opinionated""";,Configurações padrão que funcionam bem juntas.
+Por que Spring Boot é standalone;,Possui servidor embutido (Tomcat).
+O que é um starter no Spring;,Conjunto de dependências prontas para uso.
+Qual o fluxo básico de uma API Spring;,Request → Controller → Service → Repository → Banco.
+O que é uma Thread;,Fluxo independente de execução.
+O que é concorrência;,Execução simultânea de múltiplas tarefas.
+O que é Race Condition;,Duas threads alteram o mesmo estado simultaneamente.
+Exemplo comum de Race Condition;,Dois saques simultâneos do mesmo saldo.
+Por que aplicações web usam várias threads;,Para atender múltiplas requisições simultâneas.
+O que é sincronização;,Controle de acesso a recursos compartilhados.
+O que é JUnit;,Framework para testes unitários.
+O que é teste unitário;,Teste de pequena unidade de código.
+Por que evitar testar Scanner ou System.out;,Porque são I/O, não lógica de negócio.
+O que é Mockito;,Framework para simular dependências.
+O que é um mock;,Objeto simulado para testes.
+Por que testes aumentam senioridade;,Evitam regressões e bugs futuros.
+O que é ServerSocket;,Classe que espera conexões em uma porta.
+O que é Socket;,Classe que envia e recebe dados.
+ServerSocket ou Socket: quem espera;,ServerSocket.
+ServerSocket ou Socket: quem conversa;,Socket.
+Qual a ordem correta da comunicação;,Cliente escreve → Servidor lê na mesma ordem.
+Por que a ordem de leitura importa;,Leitura fora da sequência causa erro ou bloqueio.
+O que é protocolo;,Regras de comunicação entre cliente e servidor.
+Por que sempre usar try-catch em rede;,Conexões podem falhar a qualquer momento.
+O que é Clean Code;,Código fácil de ler e manter.
+Por que nomes claros são importantes;,Facilitam manutenção e leitura.
+Quando um método deve ser dividido;,Quando fica grande ou confuso.
+O que diferencia um júnior de um sênior;,Impacto, escalabilidade e manutenção.
+O que é Java moderno;,Uso de Streams, Optional, lambdas e boas práticas.
+Qual a mentalidade sênior em Java;,Pensar em impacto, bugs futuros e evolução.

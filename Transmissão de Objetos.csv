@@ -1,0 +1,20 @@
+﻿É o processo de converter o estado de um objeto em uma corrente de bytes para que ele possa ser gravado em disco ou enviado via rede.;O que é tecnicamente a transmissão de objetos em Java?;;
+Porque ela é uma 'Interface de Marcador' (Marker Interface), servindo apenas para indicar à JVM que o objeto tem permissão para ser serializado.;Por que a interface Serializable não possui métodos?;;
+O Java irá ignorar esse atributo durante a serialização;O que acontece se eu marcar um atributo como 'transient'?;; ele não será enviado para o servidor e chegará com o valor padrão (null ou 0).
+É um identificador de versão único para cada classe serializável, usado para garantir que o objeto desserializado seja compatível com a classe atual.;O que é o serialVersionUID?;;
+Ocorre quando você tenta serializar um objeto cuja classe (ou algum objeto contido nela) não implementa a interface Serializable.;O que causa uma NotSerializableException?;;
+O FileOutputStream lida com bytes brutos em arquivos;Qual a diferença entre FileOutputStream e ObjectOutputStream na transmissão?;; o ObjectOutputStream encapsula esses bytes para entender a estrutura de objetos Java.
+A JVM gera um ID automático em tempo de execução. Se você mudar qualquer detalhe no código da classe, esse ID muda e quebra a compatibilidade com objetos antigos.;O que acontece se eu não declarar o serialVersionUID explicitamente?;;
+Sim, a serialização é herdada. Todos os descendentes de uma classe serializável podem ser transmitidos automaticamente.;Se uma classe Pai é Serializable, a classe Filho também é?;;
+Para evitar que dados sensíveis sejam transmitidos em texto puro pela rede ou gravados em arquivos, mantendo a segurança da informação.;Por que atributos como 'senhas' devem ser marcados como transient?;;
+O Java tentará serializar toda a árvore de objetos conectados. Se não houver cuidado, isso pode gerar um fluxo de bytes enorme e lentidão na rede.;Qual o impacto de serializar objetos muito grandes com muitos relacionamentos?;;
+Não para a classe serializada. O Java reconstrói o estado dos atributos diretamente dos bytes, ignorando o construtor padrão.;O construtor da classe é chamado durante a desserialização?;;
+Mantendo o mesmo serialVersionUID fixo. O Java atribuirá o valor padrão (null) aos campos novos que não existiam no objeto original.;Como adicionar um novo campo em uma classe sem quebrar a leitura de objetos antigos?;;
+Por ser um formato binário proprietário do Java (difícil integração com outras línguas) e por ter vulnerabilidades de segurança conhecidas.;Por que a serialização nativa do Java é evitada em APIs REST modernas?;;
+É uma alternativa à Serializable onde o desenvolvedor escreve manualmente como o objeto deve ser gravado, sendo muito mais rápida e eficiente em termos de tamanho de bytes.;O que é a interface 'Externalizable' e quando usá-la?;;
+Ele permite que diferentes versões de um software (ex: um app antigo e um servidor novo) ainda consigam trocar mensagens básicas sem travar o sistema.;Como o serialVersionUID ajuda em sistemas distribuídos (Sistemas Legados)?;;
+Validando os dados de entrada, usando 'Look-ahead ObjectInputStream' ou preferindo formatos como JSON/Protocol Buffers para comunicação externa.;Como evitar ataques de desserialização (Deserialization Vulnerability)?;;
+O ObjectOutputStream mantém um cache de objetos já enviados;Como o Java lida com referências circulares durante a serialização?;; se ele encontra o mesmo objeto novamente, envia apenas um 'ponteiro', evitando loops infinitos.
+A passivação (Questão 9 do seu teste) usa a serialização para mover o objeto da memória RAM para o disco quando o servidor precisa de espaço.;Qual a relação entre Passivação do EJB e Serialização?;;
+Serializaria a lista de forma comprimida (GZIP) ou usaria processamento em lotes (Batch) para não estourar o buffer do Socket TCP.;Na Suite BPO, como você enviaria uma lista de 10 mil Notas Fiscais?;;
+O Java está evoluindo para 'Records' e serialização baseada em construtores, visando torná-la mais segura, previsível e fácil de depurar.;Qual a tendência do Java (Projeto Amber) em relação à serialização?;;
