@@ -42,10 +42,9 @@ public class JogoSessaoBean implements Serializable {
         int somaCorreta = numero1 + numero2;
 
         if (respostaUsuario != null && respostaUsuario == somaCorreta) {
-            int pontos = 0;
-            pontos++;
+            this.pontos++; // Usa a variável de instância da classe
             mensagemFeedback = "Acertou!";
-            rankingGlobal.atualizarPontuacao(nome, pontos);
+            rankingGlobal.atualizarPontuacao(nome, this.pontos);
             prepararNovaRodada();
         } else {
             mensagemFeedback = "Errou! Tente novamente.";

@@ -5,7 +5,7 @@
     <artifactId>jogo-soma-ejb</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>jogo-soma-ejb-1.0-SNAPSHOT</name>
+    <name>EJB Application</name>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,9 +26,9 @@
             <type>jar</type>
         </dependency>
     </dependencies>
-    
-    <build>
-        <plugins>
+        <build>
+        <finalName>jogo-soma-ejb</finalName>
+          <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
