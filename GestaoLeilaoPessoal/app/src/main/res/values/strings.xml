@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GestaoLeilaoPessoal</string>
+    <!-- criar a lista -->
+    <string-array name="perfil_licitante_array">
+        <item>Iniciante</item>
+        <item>Intermediário</item>
+        <item>Conservador</item>
+        <item>Agressivo</item>
+    </string-array>
+</resources>
