@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Uso de elementos Textview -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Licitante"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="center" />
+
+        <!-- Uso de elementos EditText (pelo menos 1) -->
+        <TextView
+            android:id="@+id/tvLabelNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome Completo do Licitante:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o nome do usuário"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Uso de elementos RadioButton (pelo menos 2) com pelo menos um RadioGroup fazer lances -->
+        <TextView
+            android:id="@+id/tvLabelNotificacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Envio de alertas de lances:"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/rgNotificacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SMS" />
+
+            <RadioButton
+                android:id="@+id/rbEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:layout_marginStart="24dp" />
+        </RadioGroup>
+
+        <!-- Uso de elementos Spinner (pelo menos 1) Perfil Investidor -->
+        <TextView
+            android:id="@+id/tvLabelPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perfil de Investimento:"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spPerfilLicitante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:entries="@array/perfil_licitante_array"
+            android:minHeight="48dp" />
+
+        <!-- Uso de elementos CheckBox (pelo menos 1) -->
+        <CheckBox
+            android:id="@+id/cbTermosFinanceiros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Declaro possuir saldo para simulação de lances"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Uso de 2 elementos Button Liimpar e Salvar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLimpar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Limpar"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Salvar"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
